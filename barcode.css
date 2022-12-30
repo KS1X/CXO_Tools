@@ -1,0 +1,97 @@
+/** Info page body **/
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #232F3E;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+@media screen and (max-width: 50em) {
+    body {
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+/** Nav stuff**/
+
+#header {
+    width: 100%;
+    height: 90vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px 12px;
+  }
+  
+  header nav {
+    width: 100%;
+    height: 10vh;
+    background-color: #131A22;
+    display: grid;
+    align-items: center;
+    border-bottom: 4px solid #FEBD69;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  header .nav-item {
+    display: inline;
+    margin: 0 8px;
+  }
+  
+  header .nav-item:first-of-type {
+    margin-left: 48px;
+  }
+  
+  header .nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  header .nav-item a:hover {
+    text-decoration: underline;
+  }
+  
+  header #more-drop-down-menu a:last-of-type:hover {
+    text-decoration: none;
+  }
+  
+  header .nav-item a.active {
+    text-decoration: underline;
+    color: #FEBD69;
+  }
+  
+  /** menu**/
+  menu{
+  margin-top:14vh;
+  text-align: center;
+  }
+  menu p{
+  font-size: 14px;
+  line-height:125%;
+  padding: 25px;
+  }
+  
+  /** footer stuff **/
+  
+  #footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 40px;
+    background-color: #131A22;
+    border-top: 4px solid #FEBD69;
+    text-align: center;
+    padding: 40px 12px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+  }
