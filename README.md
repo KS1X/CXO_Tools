@@ -1,6 +1,9 @@
 # Amazon-Locker-Saver-V3
 
-Amazon CXO Tool that gives the ability to keep return metrics looking good!
+Amazon CXO Tool that gives associates a barcode and QRcode generator to increase efficiency and resolve CS latency!
 
-Lockers take anywhere around 5 to 10 min to accept QRcode returns, this tool simpily allows associates to print off the generated QRcode from the clients device to later scan at a later time. 
+Some Features are still WIP, support is limited on this release.
+
+See amzncxo.com/barcode.html for release version
+
 
