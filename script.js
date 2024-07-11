@@ -6,15 +6,35 @@ btn.addEventListener("click", () => {
   if (user_input.value != "") {
     if (qr_code_element.childElementCount == 0) {
       generate(user_input);
+      inputInfo(user_input);
     } else {
       qr_code_element.innerHTML = "";
       generate(user_input);
+      inputInfo(user_input);
     }
   } else {
-    console.log("not valid input");
+    alert("Please enter a valid input");
     qr_code_element.style = "display: none";
   }
 });
+
+// function append what was inputted below the qr code
+function inputInfo(user_input) {
+  let info = document.createElement("div");
+  info.classList.add("input-info");
+  info.innerHTML = `<p style = 
+  'outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  background-color: #5b92799d;
+  background-color: #626567;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;'>QRCode for: ${user_input.value}</p>`;
+  qr_code_element.appendChild(info);
+}
 
 function generate(user_input) {
   qr_code_element.style = "";

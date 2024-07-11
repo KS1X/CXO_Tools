@@ -31,6 +31,7 @@ body {
 body .heading {
   margin: 3rem 0 5rem 0;
 }
+
 body .title,
 body .sub-title {
   font-size: 4rem;
@@ -39,6 +40,7 @@ body .sub-title {
   color: #12130f;
   color: #eee5e9;
 }
+
 body .sub-title {
   font-size: 1.5rem;
   color: #eee5e9;
@@ -94,7 +96,7 @@ body .button {
   background-color: #5b92799d;
   background-color: #FEBD69;
   color: black;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
 }
 body .button i {
@@ -130,7 +132,7 @@ body .qr-code-container .qr-code button {
   outline: none;
   width: 100%;
   margin-top: 2.5rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 body .qr-code-container .qr-code button a {
   font-family: "Poppins", sans-serif;
@@ -139,7 +141,8 @@ body .qr-code-container .qr-code button a {
   height: 100%;
   text-decoration: none;
   color: #eae6e5;
-  padding: 1rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2.5rem;
 }
 body .qr-code-container .qr-code button a i {
   margin-left: 0.5rem;

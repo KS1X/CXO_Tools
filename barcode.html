@@ -1,52 +1,43 @@
 <!--make a webpage-->
 <!DOCTYPE html>
 <html lang="en" >
-    <header>
-        <nav>
-          <ul>
-              <li class="nav-item"><a href="index.html">QRCode</a></li>
-              <li class="nav-item"><a href="barcode.html" class="active">Barcode</a></li>
-              <li class="nav-item"><a href="info.html">Information</a></li>
-          </ul>
-      </nav>
-    </header>
+<header>
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="index.html">QRCode</a></li>
+            <li class="nav-item"><a href="info.html">Information</a></li>
+        </ul>
+    </nav>
+</header>
 
 <head>
   <meta charset="UTF-8">
-  <title>Information</title>
+  <title>CXO Barcode Generator</title>
     <link rel="stylesheet" href="barcode.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
 </head>
 
-<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
-<script>
-    function generateBarcode(value) {
-        JsBarcode("#barcode", value, {
-            format: "CODE128",
-            lineColor: "#000",
-            width: 2,
-            height: 100,
-            displayValue: true
-        })
-    }
-</script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script><script  src="./bc_script.js"></script>
 <body>
-    <!--<h1>Barcode Generator</h1>-->
-    <div>
-        <label>Generate Barcode: </label>
-        <input nam="barcode" placeholder="Scan here..." type="text" onchange="generateBarcode(this.value)">
+    <div class="user-input-section">
+        <section class="heading">
+            <div class="title">CXO Barcode Generator</div>
+            <div class="sub-title">Scan A new Barcode below!</div>
+        </section>
+        <section class="user-input">
+            <input type="text" placeholder="Scan here..." name="input_text" id="input_text" autocomplete="off" onchange="generateBarcode(this.value)">
+            <button class="button" type="submit">Generate<i class="fa-solid fa-rotate"></i></button>
+            <button class="button" type="submit" onclick="window.print()">Print<i class="fa-solid fa-print"></i></button>
+        </section>
     </div>
-    <div>
+    <div class="barcode-container">
         <svg id="barcode"></svg>
     </div>
-
     <div id="footer">
         <p>This site is developed and maintained by John Gwynn(gwyjohnk) and Devon Taylor(ftadonav).</p>
     </div>
-
 </body>
 
 </html>

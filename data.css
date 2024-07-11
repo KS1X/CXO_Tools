@@ -1,20 +1,3 @@
-:root {
-  font-size: 62.5%;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-}
-
-
 /** Info page body **/
 body {
     display: flex;
@@ -22,75 +5,8 @@ body {
     justify-content: center;
     background-color: #232F3E;
     height: 100vh;
+    font-family: "Poppins", sans-serif;
     color: white;
-}
-
-body .title,
-body .sub-title {
-  font-size: 4rem;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  color: #12130f;
-  color: #eee5e9;
-}
-
-body .sub-title {
-  font-size: 1.5rem;
-  color: #eee5e9;
-  opacity: 0.5;
-}
-
-body .heading {
-  margin: 3rem 0 5rem 0;
-}
-
-body .user-input-section .user-input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-body .user-input-section .user-input label {
-  text-align: center;
-  font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
-}
-
-body .user-input-section .user-input input {
-  width: 80%;
-  max-width: 35rem;
-  font-family: "Poppins", sans-serif;
-  outline: none;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #9b8774ad;
-  background-color: #7c7c7c;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  margin: 1rem 1rem 2rem 1rem;
-  color: black;
-}
-
-body .user-input-section .user-input input::placeholder {
-  color: #eee5e9;
-  color: #2b303a;
-}
-
-body .button {
-  outline: none;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 1.5rem 2.5rem;
-  margin-bottom: 3rem;
-  background-color: #5b92799d;
-  background-color: #FEBD69;
-  color: black;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.6rem;
-}
-
-body .button i {
-  margin-left: 1rem;
 }
 
 @media screen and (max-width: 50em) {
@@ -142,7 +58,6 @@ body .button i {
   
   header .nav-item a:hover {
     text-decoration: underline;
-    color: #FEBD69; 
   }
   
   header #more-drop-down-menu a:last-of-type:hover {
@@ -159,7 +74,6 @@ body .button i {
   margin-top:14vh;
   text-align: center;
   }
-
   menu p{
   font-size: 14px;
   line-height:125%;
@@ -180,4 +94,9 @@ body .button i {
     padding: 40px 12px;
     font-family: "Poppins", sans-serif;
     color: white;
+  }
+
+/** table stuff **/
+table, th, td {
+    border:1px solid #FEBD69;
   }
