@@ -1,10 +1,10 @@
-<!--make a webpage-->
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <header>
     <nav>
         <ul>
             <li class="nav-item"><a href="index.html">QRCode</a></li>
+            <li class="nav-item"><a href="problemsolve.html">Problem Solve</a></li>
             <li class="nav-item"><a href="info.html">Information</a></li>
         </ul>
     </nav>
@@ -27,16 +27,17 @@
             <div class="sub-title">Scan A new Barcode below!</div>
         </section>
         <section class="user-input">
-            <input type="text" placeholder="Scan here..." name="input_text" id="input_text" autocomplete="off" onchange="generateBarcode(this.value)">
+            <!-- <input type="text" placeholder="Scan here..." name="input_text" id="input_text" autocomplete="off" onchange="generateBarcode(this.value)"> -->
+            <textarea type="text" maxlength="25" name="input_text" id="myTextarea" rows="4" autocomplete="off" onchange="generateBarcode(this.value)" placeholder="Enter new barcode here.."></textarea>
             <button class="button" type="submit">Generate<i class="fa-solid fa-rotate"></i></button>
-            <button class="button" type="submit" onclick="window.print()">Print<i class="fa-solid fa-print"></i></button>
+            <button class="button" type="submit" onclick="printDiv(barcodeContainer)">Print<i class="fa-solid fa-print"></i></button>
         </section>
     </div>
-    <div class="barcode-container">
+    <div id="barcodeContainer" class="barcode-container">
         <svg id="barcode"></svg>
     </div>
     <div id="footer">
-        <p>This site is developed and maintained by John Gwynn(gwyjohnk) and Devon Taylor(ftadonav).</p>
+        <p>This site is developed and maintained by John Gwynn(gwyjohnk).</p>
     </div>
 </body>
 

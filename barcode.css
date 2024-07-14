@@ -71,6 +71,22 @@ body .user-input-section .user-input input {
   color: black;
 }
 
+/* create similar text area theme like input */
+body .user-input-section .user-input textarea {
+  width: 80%;
+  max-width: 35rem;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #9b8774ad;
+  background-color: #7c7c7c;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin: 1rem 1rem 2rem 1rem;
+  color: black;
+}
+
 body .user-input-section .user-input input::placeholder {
   color: #eee5e9;
   color: #2b303a;
@@ -180,4 +196,9 @@ body .button i {
     padding: 40px 12px;
     font-family: "Poppins", sans-serif;
     color: white;
+  }
+
+  ::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
   }

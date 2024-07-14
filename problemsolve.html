@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CXO Problem Solve</title>
+    <link rel="stylesheet" href="problemsolve.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="index.html">QRCode</a></li>
+            <li class="nav-item"><a href="barcode.html">Barcode</a></li>
+            <li class="nav-item"><a href="info.html">Information</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>CXO Problem Solve</h1>
+        <form id="itemForm">
+            <label>
+                Associate Name:
+                <input type="text" id="associateName" placeholder="@gwyjohnk" required>
+            </label>
+            <label>
+                Item Name:
+                <input type="text" id="itemName" placeholder="Ex: Clothing" required>
+            </label>
+            <label>
+                Today's Date:
+                <input type="date" id="date" required>
+            </label>
+            <label>
+                Estimated Time:
+                <input type="time" id="time" required>
+            </label>
+            <label>
+                Add Picture:
+                <input type="file" class="custom-picture-upload" id="picture" accept="image/*">
+            </label>
+            <label>
+                Item Description:
+                <textarea id="itemDescription" maxlength="400" rows="4" cols="100" placeholder="Ex: Package left in locker"></textarea>
+            </label>
+            <button type="submit">Add New Item</button>
+        </form>
+        <div id="cardsContainer">
+            <!-- Cards will be added here -->
+             <h2>Problem Solve items:</h2>
+        </div>
+        <div class="log">
+            <h2>Completed Items:</h2>
+            <div id="deletedLog"></div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>This site is developed and maintained by John Gwynn(gwyjohnk).</p>
+    </div>
+    <script src="problemsolve_script.js"></script>
+</body>
+</html>

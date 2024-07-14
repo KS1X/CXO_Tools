@@ -74,3 +74,13 @@ function generate(user_input) {
 generate({
   value: "https://murtuzaalisurti.github.io/qr"
 });
+
+function printThis(div) {
+  const printWindow = window.open('', '', 'height=600,width=800');
+  printWindow.document.write('<html><head><title>Print</title>');
+  printWindow.document.write('</head><body >');
+  printWindow.document.write(div.innerHTML);
+  printWindow.document.write('</body></html>');
+  printWindow.document.close();
+  printWindow.print();
+}

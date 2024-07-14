@@ -11,29 +11,25 @@ btn.addEventListener("click", () => {
     }
 });
 
-function generateBarcode(value) {
+// function that prints each new line in the textarea
 
-    JsBarcode("#barcode", value, {
+function generateBarcode(line) {
+
+    JsBarcode("#barcode", line, {
         format: "CODE128",
         lineColor: "#000",
         width: 2,
         height: 100,
         displayValue: true
     })
+}
 
-    let download = document.createElement("button");
-    document.querySelector(".barcode").appendChild(download);
-
-    let download_link = document.createElement("a");
-    download_link.setAttribute("download", "barcode.png");
-    download_link.innerHTML = `Download <i class="fa-solid fa-download"></i>`;
-    download.appendChild(download_link);
-
-    let barcode_img = document.querySelector(".barcode img");
-    let barcode = document.querySelector(".barcode");
-
-    barcode_img.style = "display: none";
-    barcode.style = "display: block";
-
-
+function printDiv(div) {
+    const printWindow = window.open('', '', 'height=600,width=800');
+    printWindow.document.write('<html><head><title>Print</title>');
+    printWindow.document.write('</head><body >');
+    printWindow.document.write(div.innerHTML);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
 }

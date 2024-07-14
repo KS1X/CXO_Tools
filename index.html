@@ -3,7 +3,8 @@
 <header>
   <nav>
     <ul>
-        <li class="nav-item"><a href="barcode.html">Create Barcode</a></li>
+        <li class="nav-item"><a href="barcode.html">Barcode</a></li>
+        <li class="nav-item"><a href="problemsolve.html">Problem Solve</a></li>
         <li class="nav-item"><a href="info.html">Information</a></li>
     </ul>
   </nav>
@@ -30,11 +31,12 @@
     <section class="user-input">
       <input type="text" placeholder="Scan here..." name="input_text" id="input_text" autocomplete="off">
       <button class="button" type="submit">Generate<i class="fa-solid fa-rotate"></i></button>
+      <button class="button" type="print">Print<i class="fa-solid fa-print" onclick="printThis(qrcodeID)"></i></button>
     </section>
   </div>
 <div class="qr-code-container">
-  <div class="qr-code" style></div>
-</div>
+  <div class="qr-code" id="qrcodeID"></div>
+</div> 
   <div id="footer">
     <p>This site is developed and maintained by John Gwynn (@gwyjohnk).</p>
   </div>
