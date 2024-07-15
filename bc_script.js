@@ -11,8 +11,6 @@ btn.addEventListener("click", () => {
     }
 });
 
-// function that prints each new line in the textarea
-
 function generateBarcode(line) {
 
     JsBarcode("#barcode", line, {
